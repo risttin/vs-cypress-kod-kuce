@@ -33,7 +33,7 @@ describe('Create Board Test', () => {
             expect(interception.response.body.name).have.string(boardTitle);
             orgId = interception.response.body.organization_id;
             boardId = interception.response.body.id;
-            cy.writeFile('../vs-cypress-kod-kuce/cypress/fixtures/boardData.json', {boardId, orgId, boardTitle});
+            cy.writeFile('boardData.json', {boardId, orgId, boardTitle});
           })
 
         createBoardPage.boardTitleHeader.should('exist')

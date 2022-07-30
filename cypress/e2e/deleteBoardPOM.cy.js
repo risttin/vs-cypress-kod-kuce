@@ -2,9 +2,9 @@
 
 import { loginPage } from '../page_objects/loginPage';
 import { deleteBoardPage } from '../page_objects/deleteBoardPage';
-import { boardId } from '../fixtures/boardData.json'
-import { boardTitle } from '../fixtures/boardData.json'
-import { orgId } from '../fixtures/boardData.json'
+import { boardId } from '../../boardData.json'
+import { boardTitle } from '../../boardData.json'
+import { orgId } from '../../boardData.json'
 
 describe('Delete Board Test', () => {
 
@@ -17,6 +17,7 @@ describe('Delete Board Test', () => {
     })
 
     it('Delete a Board', () => {
+
         cy.url().should('include', '/my-organizations');
         
         cy.intercept({
